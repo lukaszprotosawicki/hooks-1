@@ -1,5 +1,16 @@
-.App {
+* {
+	margin: 0;
 	box-sizing: border-box;
-	display: block;
+}
+
+.App {
+	padding-top: 150px;
 	text-align: center;
+	background-color: rgb(37, 36, 36);
+	height: 2200px;
+	color: white;
+}
+
+.App div {
+	padding: 20px;
 }
