@@ -6,6 +6,12 @@ function App() {
 	const [age, setAge] = useState(42);
 	const [count2, setCount2] = useState(0);
 
+	const friendList = [
+		{ id: 1, name: "John" },
+		{ id: 2, name: "Jane" },
+		{ id: 3, name: "Mary" },
+	];
+
 	useEffect(() => {
 		document.title = `Naciśnieto ${count2} razy`;
 	});
@@ -25,6 +31,15 @@ function App() {
 			<div>
 				<p>Naciśnięto {count2} razy</p>
 				<button onClick={() => setCount2(count2 + 1)}>Naciśnij mnie</button>
+			</div>
+			<div>
+				<select>
+					{friendList.map((friend) => (
+						<option key={friend.id} value={friend.id}>
+							{friend.name}
+						</option>
+					))}
+				</select>
 			</div>
 		</div>
 	);
